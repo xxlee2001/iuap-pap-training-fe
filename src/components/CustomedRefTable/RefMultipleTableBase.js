@@ -157,7 +157,7 @@ class RefMultipleTableBase extends Component {
 	 */
 	launchTableHeader = (data) => {
 		if(!data) return;
-		let { multiple ,valueField='refpk'} = this.props;
+		let { multiple ,valueField='refpk',columnsWidth=[]} = this.props;
 		let keyList = data.strFieldCode || [];
 		let titleList = data.strFieldName || [];
 
@@ -176,6 +176,7 @@ class RefMultipleTableBase extends Component {
 				key: item,
 				dataIndex: item,
 				title: titleList[index],
+                width:columnsWidth[index] ? columnsWidth[index] : 200
 				// ...fMap[item]	
 			}
 		});
@@ -366,7 +367,7 @@ class RefMultipleTableBase extends Component {
 		const _this = this;
 		let { className, miniSearch = true, title = '', backdrop, size = 'lg', 
 		multiple, showModal, lang = 'zh_CN', value,
-		valueField,emptyBut=false,buttons,theme='ref-red',searchPanelLocale,fliterColumn } = this.props;
+		valueField,emptyBut=false,buttons,theme='indigo',searchPanelLocale,fliterColumn } = this.props;
 		let { showLoading, tableIsSelecting, selectedDataLength, mustRender } = this.state;
 		let { tableData, pageCount, pageSize, currPageIndex, columnsData, totalElements, checkedArray } = _this;
 		

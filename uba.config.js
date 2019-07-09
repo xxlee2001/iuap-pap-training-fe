@@ -31,7 +31,15 @@ const proxyConfig = [
     },
     //要代理访问的对方路由
     router: [
-     '/wbalone', '/iuap-saas-message-center/', '/iuap-saas-filesystem-service/', '/eiap-plus/', '/newref/', '/print_service/', '/iuap-print/'
+     '/wbalone', 
+      '/iuap-saas-message-center/', 
+      '/iuap-saas-billcode-service/',
+      '/iuap-saas-filesystem-service/', 
+      '/eiap-plus/', 
+      '/newref/', 
+      '/print_service/', 
+      '/iuap-print/',
+      '/pap_basedoc/'
     ],
     url: 'http://10.190.252.42:80'
   },
@@ -141,7 +149,7 @@ const rules = [{
   use: [{
     loader: 'file-loader',
     options: {
-      name: '[name].[hash:8].[ext]',
+      name: '[name].[ext]',
       outputPath: 'fonts',
       publicPath: pathUrl + context + '/fonts/'
     }
