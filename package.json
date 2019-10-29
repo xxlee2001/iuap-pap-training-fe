@@ -53,7 +53,7 @@
   "dependencies": {
     "ac-attachment": "^0.2.7",
     "async-validator": "1.10.0",
-    "axios": "0.18.0",
+    "axios": "0.18.1",
     "bee-complex-grid": "^2.0.21",
     "bee-datepicker": "^2.1.1",
     "bee-form": "2.0.6",
